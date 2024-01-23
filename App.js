@@ -9,7 +9,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='WelcomeScreen'>
-      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: true, title: '', headerStyle: { backgroundColor: '#FFA451'} }}/>
+      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false,  headerStyle: { backgroundColor: '#FFA451'} }}/>
       <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: true, title: '', headerStyle: { backgroundColor: '#FFA451'} }}/>
       </Stack.Navigator>
     </NavigationContainer>

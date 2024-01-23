@@ -7,6 +7,6 @@ import fruit from './fruitSalad.png';
 import honey from './honey.png';
 import order from './order.png';
 import quiona from './quiona.png';
-import welcome from './welcome';
+import Welcome from './welcome.png';
 
-export { authImage, berry, customer, delivery, ellipse, fruit,honey, order, quiona, welcome}
+export { authImage, berry, customer, delivery, ellipse, fruit,honey, order, quiona, Welcome}
