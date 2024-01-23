@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image} from 'react-native'
 // import { Image } from 'expo-image';
 import { Welcome, ellipse } from '../assets/images';
+import Button from '../components/Button';
 const WelcomeScreen = () => {
   return (
     <View style={styles.container}>
@@ -9,8 +10,12 @@ const WelcomeScreen = () => {
         <Image source={Welcome} resizeMode='cover' style={styles.img}/>
         <Image source={ellipse}/>
       </View>
-      <View>
-        
+      <View style={styles.body}>
+        <Text style={{fontSize: 16, fontWeight: 'bold', paddingVertical: 10}}>Get The Freshest Fruit Salad Combo</Text>
+        <Text style={{fontSize: 16, color: '#5D577E'}}>We deliver the best and freshest fruit salad in town. Order for a combo today!!!</Text>
+      </View>
+      <View style={{flex: 0.5, justifyContent: 'center', alignItems: 'center', padding:24}}>
+        <Button text="Let's Continue" width={327}/>
       </View>
     </View>
   )
@@ -34,7 +39,13 @@ const styles = StyleSheet.create({
     }, 
     img: {
        marginBottom: 10, 
+    }, 
+    body: {
+        backgroundColor: '#fff',
+        width: '100%',
+        padding: 24,
     }
+
   });
 
 export default WelcomeScreen
