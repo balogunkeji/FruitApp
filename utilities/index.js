@@ -1,0 +1,1 @@
+export const Menu = ['All', 'Salad Combo', 'Berry Combo', 'Mango Combo']

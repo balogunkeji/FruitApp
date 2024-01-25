@@ -1,6 +1,7 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native'
-import { cart, menu, search, biSearch } from '../assets/images';
+import { View, Text, StyleSheet, Image, TextInput, FlatList } from 'react-native'
+import { cart,search, biSearch, menu } from '../assets/images';
+import { Menu } from '../utilities/index';
 
 const HomeScreen = () => {
   return (
@@ -21,6 +22,10 @@ const HomeScreen = () => {
           <TextInput placeholder='Chris' />
           </View>
         <Image source={search}/>
+        </View>
+        <View style={styles.menu}>
+            {/* <Text>HHello</Text> */}
+            <FlatList data={Menu} keyExtractor={item => item} renderItem={({item}) => <View style={styles.list}><Text style={{color: '#333333'}}>{item}</Text></View>} horizontal scrollEnabled showsHorizontalScrollIndicator={false}/>
         </View>
       </View>
     </View>
@@ -65,6 +70,26 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-start',
       flexDirection: 'row',
       gap: 10,
+
+  },
+  menu: {
+    height: 40,
+    background: '#fafafa',
+    marginVertical: 70,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  list: {
+    marginLeft: 8,
+    height: 32,
+    backgroundColor: 'red',
+    alignSelf: 'center',
+    paddingHorizontal: 16,
+    padding: 8,
+    borderRadius: 10,
+    fontSize: 16,
+    boxShadow: '0px 4px 2px rgba(0, 0, 0, 0.25)',
 
   }
 
