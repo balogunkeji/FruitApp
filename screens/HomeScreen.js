@@ -90,8 +90,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 16,
     boxShadow: '0px 4px 2px rgba(0, 0, 0, 0.25)',
-
-  }
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
 
 });
 
