@@ -1,13 +1,15 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TextInput, FlatList } from 'react-native'
+import { View, Text, StyleSheet, Image, TextInput, FlatList, ScrollView } from 'react-native'
 import { cart,search, biSearch, menu } from '../assets/images';
-import { Menu } from '../utilities/index';
+import { Menu, Menu2, RecommendedCard } from '../utilities/index';
+import { RecommendedCards } from '../components/Cards';
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
+      <ScrollView>
       <View style={styles.body}>
-        <View style={{flexDirection: 'row', gap: 50, paddingTop: 40}}>
+        <View style={{flexDirection: 'row', gap: 50, paddingTop: 40, alignItems: 'center'}}>
         <View style={{flexDirection: 'row', alignItems: 'center', gap: 16, marginTop: '-17%'}}>
           <Image source={menu}/>
           <Text style={{fontSize: 16, fontWeight: 400, paddingVertical: 10, color: '#27214D'}}>Welcome, Chris.</Text>
@@ -24,10 +26,22 @@ const HomeScreen = () => {
         <Image source={search}/>
         </View>
         <View style={styles.menu}>
-            {/* <Text>HHello</Text> */}
-            <FlatList data={Menu} keyExtractor={item => item} renderItem={({item}) => <View style={styles.list}><Text style={{color: '#333333'}}>{item}</Text></View>} horizontal scrollEnabled showsHorizontalScrollIndicator={false}/>
+            <FlatList data={Menu} keyExtractor={item => item} renderItem={({item}) => <View style={[styles.list, styles.shadowProp]}><Text style={{color: '#333333'}}>{item}</Text></View>} horizontal scrollEnabled showsHorizontalScrollIndicator={false}/>
+        </View>
+        <View style={{justifyContent: 'center', alignItems: 'flex-start', gap: 10}}>
+        <View style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10}}>
+          <Text style={{color:'rgba(39, 33, 77, 1)', fontSize: 18}}>Recommended Combo</Text>
+          <View style={{width: 70, height: 2, backgroundColor: 'rgba(255, 164, 81, 1)'}}></View>
+        </View> 
+        <View style={{alignItems: 'center', gap: 10, marginTop: 10 }}>
+        <FlatList data={RecommendedCard} keyExtractor={item => item.id} renderItem={({item}) => <View style={{marginLeft: 10}}><RecommendedCards icon={item.icon} img={item.img} text={item.text} price={item.price} icon2={item.icon2}/></View> } horizontal/> 
+        </View>
+        </View>
+        <View>
+        <FlatList data={Menu2} keyExtractor={item => item} renderItem={({item}) => <View><Text style={{color: '#333333'}}>{item}</Text></View>} horizontal scrollEnabled showsHorizontalScrollIndicator={false}/>
         </View>
       </View>
+      </ScrollView>
     </View>
   )
 }
@@ -35,7 +49,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255, 255, 255, 1)',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     
@@ -52,10 +66,9 @@ const styles = StyleSheet.create({
      marginBottom: 10, 
   }, 
   body: {
-      backgroundColor: '#fff',
       width: '100%',
       paddingHorizontal: 24,
-      alignItems: 'center',
+      // alignItems: 'center',
 
   },
   input: {
@@ -83,16 +96,15 @@ const styles = StyleSheet.create({
   list: {
     marginLeft: 8,
     height: 32,
-    backgroundColor: 'red',
+    backgroundColor: '#fff',
     alignSelf: 'center',
     paddingHorizontal: 16,
     padding: 8,
     borderRadius: 10,
     fontSize: 16,
-    boxShadow: '0px 4px 2px rgba(0, 0, 0, 0.25)',
   },
   shadowProp: {
-    shadowColor: '#171717',
+    shadowColor: 'rgba(0, 0, 0, 0.25)',
     shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 3,
