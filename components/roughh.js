@@ -2,15 +2,7 @@
       <View>
       
       </View>
-        <View style={{flex: 0.5}}>
-        <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', gap: 10}}>
-          <View style={styles.input}>
-            <Image source={biSearch}/>
-          <TextInput placeholder='Chris' />
-          </View>
-        <Image source={search}/>
-        </View>
-        </View>
+       
 
         <View>
         <View style={styles.menu}>

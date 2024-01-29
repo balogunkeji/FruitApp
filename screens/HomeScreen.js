@@ -8,11 +8,11 @@ import Welcome from '../components/Welcome';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView>
         <Welcome/>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   )
 }
 
@@ -40,20 +40,7 @@ const styles = StyleSheet.create({
       width: '100%',
       paddingHorizontal: 24,
   },
-  input: {
-      width: '90%',
-      height: 56,
-      borderRadius: 10,
-      borderColor: 'transparent',
-      backgroundColor: '#F7F5F5',
-      paddingLeft: 10,
-      color: '#1D1C1A',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      flexDirection: 'row',
-      gap: 10,
-
-  },
+  
   menu: {
     // height: 40,
     // background: 'red',
