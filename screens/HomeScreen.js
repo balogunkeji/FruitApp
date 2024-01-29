@@ -2,9 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet, Image, TextInput, FlatList, ScrollView, SafeAreaViewBase } from 'react-native'
 import { cart,search, biSearch, menu } from '../assets/images';
 import { Menu, Menu2, RecommendedCard } from '../utilities/index';
-import { RecommendedCards } from '../components/Cards';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Recommended, Welcome } from '../components/Welcome';
+import { Recommended, Varieties, Welcome } from '../components/Welcome';
 const HomeScreen = () => {
 
   return (
@@ -13,7 +12,7 @@ const HomeScreen = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
         <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
-        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
+        <Varieties RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
       </ScrollView>
       </View>
     </SafeAreaView>

@@ -15,6 +15,22 @@ export const RecommendedCards = ({icon, img, text, price, icon2}) => {
     );
 };
 
+export const VarietiesCards = ({icon, img, text, price, icon2, bg}) => {
+    return (
+        <View style={[styles.card, styles.shadowProp, {backgroundColor: bg}]}>
+           <View style={{alignSelf: 'flex-end'}}>
+            <Image source={icon} />
+           </View>
+            <Image source={img}/>
+            <Text style={{fontWeight: 500, color: 'rgba(39, 33, 77, 1)'}}>{text}</Text>
+            <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 40}}>
+                <Text style={{fontWeight: 500, color: 'rgba(240, 134, 38, 1)'}}>{price}</Text>
+                <Image source={icon2}/>
+            </View>
+        </View>
+    );
+};
+
 const styles = StyleSheet.create({
     card:{
         backgroundColor: '#fff',
