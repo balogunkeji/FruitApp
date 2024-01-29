@@ -103,12 +103,12 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
             }}
           ></View>
         </View>
-        <View style={{ alignItems: "center", gap: 10, marginTop: 10 }}>
+        <View style={{ alignItems: "center", marginTop: 10 }}>
           <FlatList
             data={RecommendedCard}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View style={{ marginLeft: 10 }}>
+              <View style={{ marginLeft: 8, marginRight: 10 }}>
                 <RecommendedCards
                   icon={item.icon}
                   img={item.img}
@@ -129,11 +129,6 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
 const styless = StyleSheet.create({
   container: {
     flex: 1,
-    // paddingHorizontal: 24,
-    // backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    flexDirection: "column",
   },
   input: {
     width: "90%",

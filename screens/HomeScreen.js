@@ -10,8 +10,9 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{padding: 24}}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
+        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
         <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
       </ScrollView>
       </View>
@@ -23,9 +24,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    height: '100%'
     
   },
   image: {
@@ -42,8 +40,8 @@ const styles = StyleSheet.create({
   
   
   menu: {
-    alignItems: 'center',
-    justifyContent: 'center'
+    marginTop: 30,
+    marginBottom: 50,
   },
 
   list: {

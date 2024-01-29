@@ -18,12 +18,12 @@ export const RecommendedCards = ({icon, img, text, price, icon2}) => {
 const styles = StyleSheet.create({
     card:{
         backgroundColor: '#fff',
-        width: 155,
+        width: 153,
         height: 183,
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 15,
+        padding: 13,
         gap: 10
     },
     shadowProp: {
