@@ -1,18 +1,35 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TextInput, FlatList, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, Image, TextInput, FlatList, ScrollView, SafeAreaViewBase } from 'react-native'
 import { cart,search, biSearch, menu } from '../assets/images';
 import { Menu, Menu2, RecommendedCard } from '../utilities/index';
 import { RecommendedCards } from '../components/Cards';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Welcome from '../components/Welcome';
-
+import { WelcomeHeaderLeft, WelcomeHeaderRight, Welcome } from '../components/Welcome';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const HomeScreen = () => {
+  const Stack = createNativeStackNavigator();
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <View style={{padding: 24}}>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: '#FFA451' },
+          headerShadowVisible: false,
+          headerLeft: () => (
+              <WelcomeHeaderLeft/>
+            ),
+          headerRight: () => (
+              <WelcomeHeaderRight/>
+            ),
+          headerTitle: "",
+        }}
+      />
       <ScrollView>
         <Welcome/>
       </ScrollView>
-    </View>
+      </View>
+    </SafeAreaView>
   )
 }
 
