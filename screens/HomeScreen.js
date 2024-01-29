@@ -1,18 +1,22 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TextInput, FlatList, ScrollView, SafeAreaViewBase } from 'react-native'
 import { cart,search, biSearch, menu } from '../assets/images';
-import { Menu, Menu2, RecommendedCard } from '../utilities/index';
+import { Menu, Menu2, RecommendedCard, VarietiesCard } from '../utilities/index';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Recommended, Varieties, Welcome } from '../components/Welcome';
+import { Recommended, Varieties, Welcome, WelcomeHeaderLeft, WelcomeHeaderRight } from '../components/Welcome';
 const HomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{padding: 24}}>
+      <View style={{padding: 24, paddingTop: 40}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', marginBottom: 30}}>
+          <WelcomeHeaderLeft/>
+          <WelcomeHeaderRight/>
+        </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
         <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
-        <Varieties RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
+        <Varieties VarietiesCard={VarietiesCard} Menu={Menu2} styles={styles}/>
       </ScrollView>
       </View>
     </SafeAreaView>
