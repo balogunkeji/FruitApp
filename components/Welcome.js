@@ -36,6 +36,20 @@ export const Welcome = () => {
           </View>
     )
   }
+
+  export const Recommended = ({RecommendedCard}) => {
+    return (
+          <View style={styles.container}>
+            <View style={styles.input}>
+              <Image source={biSearch}/>
+            <TextInput placeholder='Chris' />
+            </View>
+          <Image source={search}/>
+          </View>
+    )
+  }
+
+
   
 
 const styles = StyleSheet.create({
@@ -45,7 +59,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'rgba(255, 255, 255, 0.6)',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    flexDirection: 'column'
+    // flexDirection: 'column'
     
   },
   input: {

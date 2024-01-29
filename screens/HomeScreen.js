@@ -4,29 +4,15 @@ import { cart,search, biSearch, menu } from '../assets/images';
 import { Menu, Menu2, RecommendedCard } from '../utilities/index';
 import { RecommendedCards } from '../components/Cards';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { WelcomeHeaderLeft, WelcomeHeaderRight, Welcome } from '../components/Welcome';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Recommended, Welcome } from '../components/Welcome';
 const HomeScreen = () => {
-  const Stack = createNativeStackNavigator();
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={{padding: 24}}>
-      <Stack.Screen
-        options={{
-          headerStyle: { backgroundColor: '#FFA451' },
-          headerShadowVisible: false,
-          headerLeft: () => (
-              <WelcomeHeaderLeft/>
-            ),
-          headerRight: () => (
-              <WelcomeHeaderRight/>
-            ),
-          headerTitle: "",
-        }}
-      />
       <ScrollView>
         <Welcome/>
+        <Recommended/>
       </ScrollView>
       </View>
     </SafeAreaView>
