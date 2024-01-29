@@ -5,9 +5,7 @@
        
 
         <View>
-        <View style={styles.menu}>
-            <FlatList data={Menu} keyExtractor={item => item} renderItem={({item}) => <View style={[styles.list, styles.shadowProp]}><Text style={{color: '#333333'}}>{item}</Text></View>} horizontal scrollEnabled showsHorizontalScrollIndicator={false}/>
-        </View>
+        
         <View style={{justifyContent: 'center', alignItems: 'flex-start', gap: 10}}>
         <View style={{justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10}}>
           <Text style={{color:'rgba(39, 33, 77, 1)', fontSize: 18}}>Recommended Combo</Text>

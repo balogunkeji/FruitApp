@@ -12,7 +12,7 @@ const HomeScreen = () => {
       <View style={{padding: 24}}>
       <ScrollView>
         <Welcome/>
-        <Recommended/>
+        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
       </ScrollView>
       </View>
     </SafeAreaView>
@@ -39,16 +39,9 @@ const styles = StyleSheet.create({
   img: {
      marginBottom: 10, 
   }, 
-  body: {
-      width: '100%',
-      paddingHorizontal: 24,
-  },
+  
   
   menu: {
-    // height: 40,
-    // background: 'red',
-    marginVertical: 50,
-    // flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
   },
