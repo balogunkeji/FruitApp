@@ -41,7 +41,7 @@ export const WelcomeHeaderLeft = ({ handleClick }) => {
 export const WelcomeHeaderRight = ({ handleClick }) => {
   return (
     <TouchableOpacity onPress={handleClick}>
-      <Image source={cart} resizeMode='contain' style={{marginTop: -20}}/>
+      <Image source={cart} resizeMode='contain' style={{ marginTop: -20 }} />
     </TouchableOpacity>
   );
 };
@@ -90,6 +90,7 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
             justifyContent: "flex-start",
             alignItems: "flex-start",
             gap: 10,
+            marginTop: 10,
           }}
         >
           <Text style={{ color: "rgba(39, 33, 77, 1)", fontSize: 18 }}>
@@ -126,50 +127,122 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
   );
 };
 
-export const Varieties = ({ VarietiesCard, Menu, styles, active, setActive, menu, setMenu }) => {
-    
-    return (
-      <View style={styless.container}>
+export const Varieties = ({ VarietiesCard }) => {
+  const [menu, setMenu] = React.useState({
+    Hottest: true,
+    Popular: false,
+    New: false,
+  });
+  return (
+    <View style={styless.container}>
+      <View
+        style={{ justifyContent: "center", alignItems: "flex-start", gap: 10 }}
+      >
         <View
-          style={{ justifyContent: "center", alignItems: "flex-start", gap: 10 }}
+          style={{
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            gap: 30,
+            flexDirection: "row",
+            marginHorizontal: 10,
+            marginTop: 10,
+          }}
         >
-          <View
-            style={{
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              gap: 10,
-            }}
+          <TouchableOpacity
+            onPress={() =>
+              setMenu({ Hottest: true, Popular: false, New: false })
+            }
           >
-            
-            
-          </View>
-          <View style={{ alignItems: "center", marginTop: 10 }}>
-            <FlatList
-              data={VarietiesCard}
-              keyExtractor={(item) => item.id}
-              renderItem={({ item }) => (
-                <View style={{ marginLeft: 8, marginRight: 10 }}>
-                  <VarietiesCards
-                    icon={item.icon}
-                    img={item.img}
-                    text={item.text}
-                    price={item.price}
-                    icon2={item.icon2}
-                    bg={item.bg}
-                  />
-                </View>
-              )}
-              horizontal
-            />
-          </View>
+            <Text
+              style={{
+                color: menu.Hottest ? "rgba(39, 33, 77, 1)" : "rgba(180, 180, 192, 1)",
+                fontSize: 18,
+                paddingBottom: 5,
+              }}
+            >
+              Hottest
+            </Text>
+            <View
+            style={{
+              width: 50,
+              height: 4,
+              backgroundColor: menu.Hottest? "rgba(255, 164, 81, 1)" : 'transparent',
+            }}
+          ></View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              setMenu({ Hottest: false, Popular: true, New: false })
+            }
+          >
+            <Text
+              style={{
+                color: menu.Popular ? "rgba(39, 33, 77, 1)" : "rgba(180, 180, 192, 1)",
+                fontSize: 18,
+                paddingBottom: 5,
+              }}
+            >
+              Popular
+            </Text>
+            <View
+            style={{
+              width: 50,
+              height: 4,
+              backgroundColor: menu.Popular ? "rgba(255, 164, 81, 1)" : 'transparent',
+            }}
+          ></View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              setMenu({ Hottest: false, Popular: false, New: true })
+            }
+          >
+            <Text
+              style={{
+                color: menu.New ? "rgba(39, 33, 77, 1)" : "rgba(180, 180, 192, 1)",
+                fontSize: 18,
+                paddingBottom: 5,
+              }}
+            >
+              New Combo
+            </Text>
+            <View
+            style={{
+              width: 50,
+              height: 4,
+              backgroundColor: menu.New ? "rgba(255, 164, 81, 1)" : 'transparent',
+            }}
+          ></View>
+          </TouchableOpacity>
+        </View>
+        <View style={{ alignItems: "center", marginTop: 10 }}>
+          <FlatList
+            data={VarietiesCard}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <View style={{ marginLeft: 8, marginRight: 10 }}>
+                <VarietiesCards
+                  icon={item.icon}
+                  img={item.img}
+                  text={item.text}
+                  price={item.price}
+                  icon2={item.icon2}
+                  bg={item.bg}
+                />
+              </View>
+            )}
+            horizontal
+          />
         </View>
       </View>
-    );
-  };
+    </View>
+  );
+};
 
 const styless = StyleSheet.create({
   container: {
     flex: 1,
+    marginVertical: 20,
   },
   input: {
     width: "90%",

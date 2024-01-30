@@ -16,7 +16,7 @@ const HomeScreen = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
         <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
-        <Varieties VarietiesCard={VarietiesCard} Menu={Menu2} styles={styles}/>
+        <Varieties VarietiesCard={VarietiesCard} styles={styles}/>
       </ScrollView>
       </View>
     </SafeAreaView>
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    height: '100%',
     
   },
   image: {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   
   
   menu: {
-    marginTop: 30,
+    marginTop: 20,
     marginBottom: 50,
   },
 
