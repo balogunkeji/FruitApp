@@ -1,9 +1,6 @@
-import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen, Login, WelcomeScreen } from "./screens";
-import { WelcomeHeaderLeft, WelcomeHeaderRight } from "./components/Welcome";
-import Detail from "./screens/Detail";
+import { HomeScreen, Login, WelcomeScreen, Detail  } from "./screens";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -16,8 +13,6 @@ export default function App() {
           options={{
             headerShown: false,
             headerStyle: { backgroundColor: "red" },
-            headerLeft: () => <WelcomeHeaderLeft />,
-            headerRight: () => <WelcomeHeaderRight />,
           }}
         />
         <Stack.Screen
@@ -46,11 +41,3 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

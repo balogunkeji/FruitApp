@@ -17,5 +17,6 @@ import plus from './cross.png';
 import search from './search.png';
 import orderTaken from './orderTaken.png';
 import biSearch from './bi_search.png';
+import breakfast from './breakfast.png'
 
-export { authImage, berry, customer, delivery, ellipse, fruit,honey, order, quiona, Welcome, love, cart, loveGroup, menu, minus, plus, search, orderTaken, biSearch }
+export { breakfast ,authImage, berry, customer, delivery, ellipse, fruit,honey, order, quiona, Welcome, love, cart, loveGroup, menu, minus, plus, search, orderTaken, biSearch }

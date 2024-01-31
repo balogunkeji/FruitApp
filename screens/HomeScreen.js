@@ -15,8 +15,8 @@ const HomeScreen = ({navigation}) => {
         </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
-        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles} onClick={() => navigation.navigate('Detail')}/>
-        <Varieties VarietiesCard={VarietiesCard} styles={styles} onClick={() => navigation.navigate('Detail')}/>
+        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles} onClick={() => navigation.navigate('Detail', {item: RecommendedCard[0]})}/>
+        <Varieties VarietiesCard={VarietiesCard} styles={styles} onClick={() => navigation.navigate('Detail', {item: VarietiesCard[0]})}/>
       </ScrollView>
       </View>
     </SafeAreaView>
