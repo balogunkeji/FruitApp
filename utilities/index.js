@@ -9,7 +9,9 @@ export const RecommendedCard = [
         text: 'Honey lime combo',
         price: '₦2,000',
         icon2: plus,
-        id: 1
+        id: 1,
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
     },
     {
         icon: love,
@@ -17,8 +19,9 @@ export const RecommendedCard = [
         text: 'Honey lime combo',
         price: '₦2,000',
         icon2: plus,
-        id: 2
-
+        id: 2,
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
     }
 ]
 
@@ -30,7 +33,9 @@ export const VarietiesCard = [
         price: '₦10,000',
         icon2: plus,
         id: 1,
-        bg: 'rgba(255, 252, 242, 1)'
+        bg: 'rgba(255, 252, 242, 1)',
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
     },
     {
         icon: love,
@@ -40,7 +45,8 @@ export const VarietiesCard = [
         icon2: plus,
         id: 2,
         bg: 'rgba(254, 244, 244, 1)',
-
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
     },
     {
         icon: love,
@@ -49,7 +55,9 @@ export const VarietiesCard = [
         price: '₦10,000',
         icon2: plus,
         id: 3,
-        bg: 'rgba(241, 239, 246, 1)'
+        bg: 'rgba(241, 239, 246, 1)',
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
     },
     {
         icon: love,
@@ -58,7 +66,9 @@ export const VarietiesCard = [
         price: '₦10,000',
         icon2: plus,
         id: 4,
-        bg: 'rgba(255, 252, 242, 1)'
+        bg: 'rgba(255, 252, 242, 1)',
+        combo: ['Red Quinoa', 'Lime', 'Honey', 'Blueberries', 'Mango', 'Strawberries', 'Fresh Mint'],
+        inst: 'If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make'
 
     }
 ]

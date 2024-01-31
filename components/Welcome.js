@@ -65,7 +65,7 @@ export const Welcome = () => {
   );
 };
 
-export const Recommended = ({ RecommendedCard, Menu, styles }) => {
+export const Recommended = ({ RecommendedCard, Menu, styles, onClick }) => {
   return (
     <View style={styless.container}>
       <View style={styles?.menu}>
@@ -109,7 +109,7 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
             data={RecommendedCard}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View style={{ marginLeft: 8, marginRight: 10 }}>
+              <TouchableOpacity style={{ marginLeft: 8, marginRight: 10 }} onPress={onClick}>
                 <RecommendedCards
                   icon={item.icon}
                   img={item.img}
@@ -117,7 +117,7 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
                   price={item.price}
                   icon2={item.icon2}
                 />
-              </View>
+              </TouchableOpacity>
             )}
             horizontal
           />
@@ -127,7 +127,7 @@ export const Recommended = ({ RecommendedCard, Menu, styles }) => {
   );
 };
 
-export const Varieties = ({ VarietiesCard }) => {
+export const Varieties = ({ VarietiesCard, onClick }) => {
   const [menu, setMenu] = React.useState({
     Hottest: true,
     Popular: false,
@@ -220,7 +220,7 @@ export const Varieties = ({ VarietiesCard }) => {
             data={VarietiesCard}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View style={{ marginLeft: 8, marginRight: 10 }}>
+              <TouchableOpacity style={{ marginLeft: 8, marginRight: 10 }} onPress={onClick}>
                 <VarietiesCards
                   icon={item.icon}
                   img={item.img}
@@ -229,7 +229,7 @@ export const Varieties = ({ VarietiesCard }) => {
                   icon2={item.icon2}
                   bg={item.bg}
                 />
-              </View>
+              </TouchableOpacity>
             )}
             horizontal
           />

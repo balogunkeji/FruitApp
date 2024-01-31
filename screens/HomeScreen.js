@@ -4,7 +4,7 @@ import { cart,search, biSearch, menu } from '../assets/images';
 import { Menu, Menu2, RecommendedCard, VarietiesCard } from '../utilities/index';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Recommended, Varieties, Welcome, WelcomeHeaderLeft, WelcomeHeaderRight } from '../components/Welcome';
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
@@ -15,8 +15,8 @@ const HomeScreen = () => {
         </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Welcome/>
-        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles}/>
-        <Varieties VarietiesCard={VarietiesCard} styles={styles}/>
+        <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles} onClick={() => navigation.navigate('Detail')}/>
+        <Varieties VarietiesCard={VarietiesCard} styles={styles} onClick={() => navigation.navigate('Detail')}/>
       </ScrollView>
       </View>
     </SafeAreaView>
