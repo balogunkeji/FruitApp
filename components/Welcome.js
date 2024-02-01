@@ -51,13 +51,12 @@ export const Welcome = () => {
   return (
     <View
       style={{
-        justifyContent: "center",
-        alignItems: "center",
+        
         flexDirection: "row",
         gap: 10,
       }}
     >
-      <Input placeholder='chris' icon={biSearch} width='90%'/>
+      <Input placeholder='chris' icon={biSearch} width={300}/>
       <Image source={search} />
     </View>
   );

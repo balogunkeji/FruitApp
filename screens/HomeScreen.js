@@ -13,7 +13,7 @@ const HomeScreen = ({navigation}) => {
           <WelcomeHeaderLeft/>
           <WelcomeHeaderRight/>
         </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} >
         <Welcome/>
         <Recommended RecommendedCard={RecommendedCard} Menu={Menu} styles={styles} onClick={() => navigation.navigate('Detail', {item: RecommendedCard[0]})}/>
         <Varieties VarietiesCard={VarietiesCard} styles={styles} onClick={() => navigation.navigate('Detail', {item: VarietiesCard[0]})}/>
