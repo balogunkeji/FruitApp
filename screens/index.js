@@ -6,4 +6,6 @@ import Cart from "./Cart";
 import Checkout from "./Chheckout";
 import TrackOrder from "./TrackOrder";
 import Payment from "./Payment";
-export{ Payment, TrackOrder, HomeScreen, WelcomeScreen, Login, Detail, Cart, Checkout}
+import OrderList from "./OrderList";
+
+export{ OrderList, Payment, TrackOrder, HomeScreen, WelcomeScreen, Login, Detail, Cart, Checkout}

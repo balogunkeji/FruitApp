@@ -12,7 +12,7 @@ const TrackOrder = ({navigation}) => {
             <Text style={{fontSize: 16, fontWeight: 300, color: 'rgba(17, 17, 17, 1)', textAlign: 'center', width: 250}}>Your order have been taken and is being attended to</Text>
         </View>
         <View style={{justifyContent: 'center', gap: 15, marginTop: 20}}>
-            <Button text='Track Order' color='#fff' width={208} backgroundColor={'#FFA451'} handleClick={() => navigation.navigate('TrackOrder')}/>
+            <Button text='Track Order' color='#fff' width={208} backgroundColor={'#FFA451'} handleClick={() => navigation.navigate('OrderList')}/>
             <Button text='Continue Shopping' color='rgba(240, 134, 38, 1)' width={208} backgroundColor={'rgba(252, 246, 240, 1)'} handleClick={() => navigation.navigate('Home')}/>
         </View>
     </View>

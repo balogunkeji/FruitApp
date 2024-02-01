@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen, Login, WelcomeScreen, Detail, Cart, Checkout, TrackOrder, Payment  } from "./screens";
+import { HomeScreen, Login, WelcomeScreen, Detail, Cart, Checkout, TrackOrder, Payment, OrderList  } from "./screens";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -34,6 +34,14 @@ export default function App() {
         <Stack.Screen
           name='Cart'
           component={Cart}
+          options={{
+            headerShown: false,
+            headerStyle: { backgroundColor: "#FFA451" },
+          }}
+        />
+        <Stack.Screen
+          name='OrderList'
+          component={OrderList}
           options={{
             headerShown: false,
             headerStyle: { backgroundColor: "#FFA451" },
