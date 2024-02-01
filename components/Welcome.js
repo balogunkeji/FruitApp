@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { cart, menu, biSearch, search } from "../assets/images";
 import { RecommendedCards, VarietiesCards } from "./Cards";
+import Input from "./Input";
 
 export const WelcomeHeaderLeft = ({ handleClick }) => {
   return (
@@ -56,10 +57,7 @@ export const Welcome = () => {
         gap: 10,
       }}
     >
-      <View style={styless.input}>
-        <Image source={biSearch} />
-        <TextInput placeholder='Chris' />
-      </View>
+      <Input placeholder='chris' icon={biSearch} width='90%'/>
       <Image source={search} />
     </View>
   );
@@ -244,17 +242,5 @@ const styless = StyleSheet.create({
     flex: 1,
     marginVertical: 20,
   },
-  input: {
-    width: "90%",
-    height: 56,
-    borderRadius: 10,
-    borderColor: "transparent",
-    backgroundColor: "rgba(245, 245, 245, 1)",
-    paddingLeft: 10,
-    color: "#1D1C1A",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    gap: 10,
-  },
+  
 });
