@@ -1,11 +1,10 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native'
-import { orderTaken } from '../assets/images';
+import { View, StyleSheet, Image } from 'react-native'
 import { Button } from '../components/Button';
 import Header from '../components/Header';
 import Input from '../components/Input';
 
-const Checkout = ({navigation}) => {
+const Payment = ({navigation}) => {
   return (
     <View style={styles.container}>
         <Header text='Delivery Details'/>
@@ -28,4 +27,4 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
   });
-export default Checkout
+export default Payment

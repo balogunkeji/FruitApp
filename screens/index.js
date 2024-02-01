@@ -5,4 +5,5 @@ import Detail from "./Detail";
 import Cart from "./Cart";
 import Checkout from "./Chheckout";
 import TrackOrder from "./TrackOrder";
-export{ TrackOrder, HomeScreen, WelcomeScreen, Login, Detail, Cart, Checkout}
+import Payment from "./Payment";
+export{ Payment, TrackOrder, HomeScreen, WelcomeScreen, Login, Detail, Cart, Checkout}

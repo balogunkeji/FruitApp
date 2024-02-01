@@ -5,9 +5,9 @@ import { biSearch } from '../assets/images'
 const Input = ({labelColor, label, icon, placeholder, backgroundColor, width}) => {
 
   return (
-    <View style={[styles.input, { width: width ?? "100%", backgroundColor: backgroundColor ?? "rgba(245, 245, 245, 1)"}]}>
-        {label && <Text style={{color: labelColor, marginVertical: 10, fontSize: 16, fontWeight: 400}}>{label}</Text>}
-        <View style={styles.input}>
+    <View style={{justifyContent: 'flex-start', alignItems: 'flex-start'}} >
+        {label && <Text style={{color: labelColor, marginVertical: 15, fontSize: 16, fontWeight: 400}}>{label}</Text>}
+        <View style={[styles.input, { width: width ?? "100%", backgroundColor: backgroundColor ?? "rgba(245, 245, 245, 1)"}]}>
         {icon && <Image source={icon}/>}
         <TextInput placeholder={placeholder} />
       </View>

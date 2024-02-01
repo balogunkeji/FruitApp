@@ -2,14 +2,12 @@ import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BackBtn, Button } from '../components/Button';
+import Header from '../components/Header';
 
 const Cart = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-          <BackBtn/>
-          <Text style={{fontSize: 24, fontWeight: 500, color: '#fff'}}>My Basket</Text>
-        </View>
+        <Header text={'My Basket'}/>
         <View style={styles.footer}>
           <View>
             <Text style={{color: 'rgba(51, 51, 51, 1)'}}>Total:</Text>
@@ -25,20 +23,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-  },
-  header:{
-    backgroundColor: "#FFA451",
-    height: 166,
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    left: 0,
-    paddingHorizontal: 30,
-    paddingTop: 80,
-    gap: 32,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    
   },
   body:{
   },
