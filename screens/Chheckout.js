@@ -9,7 +9,7 @@ const Checkout = ({navigation}) => {
   return (
     <View style={styles.container}>
         <Header text='Delivery Details' onClick={() => navigation.goBack()}/>
-        <View style={{marginHorizontal: 30, justifyContent: 'flex-start', gap: 20}}>
+        <View style={{marginHorizontal: 30, justifyContent: 'flex-start', gap: 20, marginTop: 200}}>
           <Input placeholder='10th avenue, Lekki, Lagos.'   label='Your delivery address'/>
           <Input placeholder='09090909090'   label='Number we can call'/>
           <View style={{marginVertical: 40, flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: "#fff",
-      justifyContent: 'center',
     },
   });
 export default Checkout

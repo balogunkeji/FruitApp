@@ -22,7 +22,7 @@ const Cart = ({navigation}) => {
                   </View>
                   <View style={{gap: 3}}>
                     <Text style={{color: 'rgba(51, 51, 51, 1)', fontWeight: 500, fontSize: 16}}>{item.text}</Text>
-                    <Text style={{fontSize: 12, weight: 300}}>2 packs</Text>
+                    <Text style={{fontSize: 12, fontWeight: 300}}>2 packs</Text>
                     <Text style={{color: 'rgba(51, 51, 51, 1)', fontWeight: 500, fontSize: 16}}>{item.price}</Text>
                   </View>
                 </View>

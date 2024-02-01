@@ -56,7 +56,7 @@ export const Welcome = () => {
         gap: 10,
       }}
     >
-      <Input placeholder='chris' icon={biSearch} width={300}/>
+      <Input placeholder='chris' icon={biSearch} width={290}/>
       <Image source={search} />
     </View>
   );
