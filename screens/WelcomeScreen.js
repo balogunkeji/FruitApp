@@ -1,8 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image} from 'react-native'
-// import { Image } from 'expo-image';
 import { Welcome, ellipse } from '../assets/images';
-import Button from '../components/Button';
+import {Button} from '../components/Button';
 const WelcomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>

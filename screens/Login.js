@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Image, TextInput} from 'react-native'
 // import { Image } from 'expo-image';
 import { authImage, ellipse } from '../assets/images';
-import Button from '../components/Button';
+import {Button} from '../components/Button';
 const Login = ({navigation}) => {
   return (
     <View style={styles.container}>
