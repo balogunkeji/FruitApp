@@ -7,14 +7,17 @@ import Input from '../components/Input';
 const Payment = ({navigation}) => {
   return (
     <View style={styles.container}>
-        <Header text='Delivery Details'/>
-        <View style={{marginHorizontal: 30, justifyContent: 'flex-start'}}>
-          <Input placeholder='10th avenue, Lekki, Lagos.'   label='Your delivery address'/>
-          <Input placeholder='09090909090'   label='Number we can call'/>
-          <View style={{marginVertical: 40, flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Button backgroundColor={'rgba(252, 246, 240, 1)'} width={156} color={'rgba(240, 134, 38, 1)'} text={'Pay on delivery'}/>
-            <Button backgroundColor={'rgba(252, 246, 240, 1)'} width={156} color={'rgba(240, 134, 38, 1)'} text={'Pay with card'} handleClick={() => navigation.navigate('Payment')}/>
+        <Header text='Add Card' onClick={() => navigation.goBack()}/>
+        <View style={{marginHorizontal: 30, justifyContent: 'flex-start', gap: 20}}>
+          <Input placeholder='10th avenue, Lekki, Lagos.'   label='Card holder’s name'/>
+          <Input placeholder='09090909090'   label='Card number'/>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Input placeholder='MM/YY'   label='Date' width={156}/>
+          <Input placeholder='057'   label='CVC' width={156}/>
           </View>
+        </View>
+        <View style={{justifyContent: 'center', marginTop: 40, alignSelf: 'center'}}>
+            <Button text='Continue' color='#fff' width={242} backgroundColor={'#FFA451'} handleClick={() => navigation.navigate('TrackOrder')}/>
         </View>
     </View>
   )

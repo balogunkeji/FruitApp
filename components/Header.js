@@ -2,10 +2,10 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { BackBtn } from './Button'
 
-const Header = ({text}) => {
+const Header = ({text, onClick}) => {
   return (
     <View style={styles.header}>
-          <BackBtn/>
+          <BackBtn onClick={onClick}/>
           <Text style={{fontSize: 24, fontWeight: 500, color: '#fff'}}>{text}</Text>
         </View>
   )
