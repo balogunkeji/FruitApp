@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen, Login, WelcomeScreen, Detail  } from "./screens";
-import Basket from "./screens/Cart";
+import { HomeScreen, Login, WelcomeScreen, Detail, Cart  } from "./screens";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -33,8 +32,8 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name='Basket'
-          component={Basket}
+          name='Cart'
+          component={Cart}
           options={{
             headerShown: false,
             headerStyle: { backgroundColor: "#FFA451" },

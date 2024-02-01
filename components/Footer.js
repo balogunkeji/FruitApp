@@ -6,7 +6,7 @@ const Footer = ({onClick}) => {
     return (
       <View style={styles.container}>
         <Image source={loveGroup}/>
-        <Button text="Add To Basket" width={219} backgroundColor={'#FFA451'} color={'#fff'} onClick={onClick}/>
+        <Button text="Add To Basket" width={219} backgroundColor={'#FFA451'} color={'#fff'} onClick={() => onClick()}/>
       </View>
     );
   };

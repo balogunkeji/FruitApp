@@ -44,8 +44,8 @@ const Detail = ({route, navigation}) => {
           ></View>
         </View>
         <View style={styles.combo}>
-            {item.combo.map((text) => (
-                <View style={styles.list}>
+            {item.combo.map((text, index) => (
+                <View style={styles.list} key={index}>
                     <Text style={{color: 'rgba(64, 62, 62, 1)'}}>{text}</Text>
                 </View>
             ))}
@@ -55,7 +55,7 @@ const Detail = ({route, navigation}) => {
                 <Text style={{color: 'rgba(51, 51, 51, 1)', fontSize: 14, lineHeight: 24, fontWeight: 300}}>{item.inst}</Text>
             </View>
             </ScrollView>
-            <Footer onClick={() => navigation.navigate('Basket')}/>
+            <Footer onClick={() => {navigation.navigate('Cart'); console.log('clicked')}}/>
         </View>
     </SafeAreaView>
   )
